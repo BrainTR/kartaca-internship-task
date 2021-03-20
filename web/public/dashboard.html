@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="tr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Gösterge Paneli</title>
+    <link rel="stylesheet" href="https://leeoniya.github.io/uPlot/dist/uPlot.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container text-center mt-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <strong class="navbar-brand">Gösterge Paneli</strong>
+        </nav>
+
+        <div id="chartContainer" class="jumbotron mt-3 mb-3 p-4">
+            <div id="chart"></div>
+            <h6><span class="badge badge-secondary">Metod adına tıklayarak filtreleme yapabilirsiniz.</span></h6>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <strong>Ayarlar</strong>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h6>Grafik Aralığı <span class="badge badge-primary">Son <span id="chartRangeLabel">60</span> Dakika</span></h6>
+                        <input id="chartRange" type="range" class="custom-range" min="5" max="60" step="1" value="60">
+                    </div>
+                    <div class="col">
+                        <h6>Veri Aralığı <span class="badge badge-primary"><span id="dataIntervalLabel">15</span> Saniye</span></h6>
+                        <input id="dataInterval" type="range" class="custom-range" min="1" max="60" step="1" value="15">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-muted mt-3">Ömer SERT - Kartaca Çekirdekten Yetişenler Programı (2021)</p>
+    </div>
+    <script src="https://leeoniya.github.io/uPlot/dist/uPlot.iife.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
